@@ -1,0 +1,24 @@
+{
+  "title": "Contact Us",
+  "hero": {
+    "title": "Contact us today",
+    "subtitle": "Let us begin together the journey of achieving your economic and investment goals with confidence and a clear vision. We are here to help you succeed!"
+  },
+  "form": {
+    "name": "Name",
+    "email": "Email",
+    "subject": "Subject",
+    "message": "Message",
+    "send": "Send",
+    "namePlaceholder": "Your full name",
+    "emailPlaceholder": "Your email address",
+    "subjectPlaceholder": "Subject of inquiry",
+    "messagePlaceholder": "How can we help you?"
+  },
+  "contact": {
+    "title": "Contact Information",  
+    "address": "Abu Roumaneh, Alnajmeh Square, Behind The Japanese Embassy",
+    "email": "office@hmmh.consulting",
+    "phone": "+963 11 331 02 26"
+  }
+}

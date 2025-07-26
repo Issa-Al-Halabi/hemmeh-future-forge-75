@@ -1,0 +1,25 @@
+{
+  "brand": "Hemmeh",
+  "menu": [
+    {
+      "name": "Home",
+      "path": "/"
+    },
+    {
+      "name": "Future Now",
+      "path": "/future-now"
+    },
+    {
+      "name": "hmmh",
+      "path": "/about"
+    },
+    {
+      "name": "Expertise",
+      "path": "/expertise"
+    },
+    {
+      "name": "Connect",
+      "path": "/contact"
+    }
+  ]
+}

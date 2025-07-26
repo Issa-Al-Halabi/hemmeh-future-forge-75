@@ -1,0 +1,30 @@
+{
+  "title": "Our Expertise",
+  "subtitle": "We draw on deep and diverse Saudi expertise, harnessing it to provide exceptional solutions that inspire success and achieve fruitful impact.",
+  "areas": [
+    {
+      "title": "Economic Analysis & Forecasting",
+      "description": "We analyze economic data and prepare future forecasts to help clients make informed strategic decisions."
+    },
+    {
+      "title": "Investment Feasibility Studies",
+      "description": "Preparing comprehensive studies to evaluate the feasibility of investment projects and identify available risks and opportunities."
+    },
+    {
+      "title": "Sector-Specific Consulting",
+      "description": "Deep expertise in diverse sectors including energy, technology, healthcare, education, and financial services."
+    },
+    {
+      "title": "Risk Assessment & Management",
+      "description": "Identifying and analyzing economic and financial risks and developing strategies to mitigate their impact."
+    },
+    {
+      "title": "Policy Impact Analysis",
+      "description": "Evaluating the impact of government and regulatory policies on economic and investment activities."
+    },
+    {
+      "title": "Financial Modeling & Valuation",
+      "description": "Building advanced financial models to evaluate companies and projects and determine fair value of investments."
+    }
+  ]
+}

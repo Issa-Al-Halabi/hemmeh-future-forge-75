@@ -1,0 +1,36 @@
+{
+  "title": "Our Services",
+  "subtitle": "We provide comprehensive economic and investment consulting services",
+  "services": [
+    {
+      "title": "Economic Consulting",
+      "description": "Comprehensive analysis of economic conditions and strategic recommendations for sustainable growth",
+      "icon": "BarChart3"
+    },
+    {
+      "title": "Investment Advisory",
+      "description": "Guiding investors to make informed and effective investment decisions that achieve optimal returns",
+      "icon": "TrendingUp"
+    },
+    {
+      "title": "Market Research & Feasibility Studies",
+      "description": "In-depth market analysis and preparation of economic feasibility studies for projects and investments",
+      "icon": "LineChart"
+    },
+    {
+      "title": "Financial Strategy Consulting",
+      "description": "Developing comprehensive financial strategies that support long-term growth and expansion goals",
+      "icon": "Target"
+    },
+    {
+      "title": "Business Development Consulting",
+      "description": "Supporting companies in developing growth strategies and improving operational performance",
+      "icon": "Rocket"
+    },
+    {
+      "title": "Policy Analysis & Economic Impact Assessment",
+      "description": "Evaluating the impact of economic policies and providing recommendations for decision makers",
+      "icon": "FileText"
+    }
+  ]
+}

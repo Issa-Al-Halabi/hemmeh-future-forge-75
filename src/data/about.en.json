@@ -1,0 +1,40 @@
+{
+  "title": "About Us",
+  "hero": {
+    "title": "At the heart of the world of economic and investment consulting, we are pioneers who master the art of crafting success",
+    "subtitle": "We combine deep practical expertise rooted in reality with a strategic vision that elevates ideas to new horizons."
+  },
+  "about": {
+    "title": "About the Company",
+    "description": "The company is a trusted destination for providing strategic economic and investment consulting. We empower businesses and investors to make well-informed, effective decisions aimed at achieving sustainable growth and competitive excellence in both local and global markets."
+  },
+  "mission": {
+    "title": "Our Mission",
+    "description": "Enabling our clients to achieve their economic and investment ambitions by providing distinguished consultations based on global best practices, coupled with a deep and comprehensive understanding of local markets."
+  },
+  "vision": {
+    "title": "Our Vision",
+    "description": "To lead as a leading strategic partner, enabling companies and investors to achieve economic excellence and sustainable growth through innovative and sustainable solutions."
+  },
+  "approach": {
+    "title": "Our Approach",
+    "points": [
+      {
+        "title": "Evidence-Based Analysis",
+        "subtitle": "Data-driven economic research and consulting"
+      },
+      {
+        "title": "Custom-Tailored Solutions",
+        "subtitle": "Personalized strategies for each client's unique needs"
+      },
+      {
+        "title": "Cross-Sector Expertise",
+        "subtitle": "Comprehensive knowledge across multiple economic sectors"
+      },
+      {
+        "title": "Long-term Value Creation",
+        "subtitle": "Sustainable solutions for enduring success"
+      }
+    ]
+  }
+}

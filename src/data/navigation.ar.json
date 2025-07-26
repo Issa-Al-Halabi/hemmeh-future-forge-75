@@ -1,0 +1,25 @@
+{
+  "brand": "همّه",
+  "menu": [
+    {
+      "name": "الرئيسية",
+      "path": "/"
+    },
+    {
+      "name": "المستقبل الآن",
+      "path": "/future-now"
+    },
+    {
+      "name": "همّه",
+      "path": "/about"
+    },
+    {
+      "name": "خبراتنا",
+      "path": "/expertise"
+    },
+    {
+      "name": "تواصل",
+      "path": "/contact"
+    }
+  ]
+}
