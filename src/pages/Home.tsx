@@ -7,9 +7,9 @@ import { BarChart3, TrendingUp, LineChart, Target, Rocket, FileText } from 'luci
 import { LoadingLogo } from '@/components/LoadingLogo';
 import heroBackground from '@/assets/hero-background.jpg';
 import beyondBordersBg from '@/assets/beyond-borders-desert-bg.jpg';
-import accelerateBg from '@/assets/accelerate-dark-bg.jpg';
-import chairmanPortrait from '@/assets/chairman-portrait.jpg';
-import partnerPortrait from '@/assets/partner-portrait.jpg';
+import accelerateBg from '@/assets/accelerate-bg.jpg';
+import chairmanPortrait from '@/assets/chairman.jpg';
+import partnerPortrait from '@/assets/partner.jpg';
 
 export const Home = () => {
   const { fontClass, isRTL, language } = useLanguage();
@@ -73,7 +73,7 @@ export const Home = () => {
   return (
     <div className={`${fontClass} ${isRTL ? 'text-right' : 'text-left'}`}>
       {/* Hero Section */}
-      <section 
+      <section
         className="min-h-screen bg-fixed-overlay flex items-center justify-center"
         style={{ backgroundImage: `url(${heroBackground})` }}
       >
@@ -84,8 +84,8 @@ export const Home = () => {
           <p className="text-xl md:text-2xl text-text-overlay/90 mb-8 max-w-3xl mx-auto">
             {content?.hero?.subtitle || ''}
           </p>
-          <Button 
-            size="lg" 
+          <Button
+            size="lg"
             className="bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg"
             onClick={scrollToServices}
           >
@@ -95,7 +95,7 @@ export const Home = () => {
       </section>
 
       {/* Accelerate the Future */}
-      <section 
+      <section
         className="py-16 md:py-20 bg-fixed-overlay"
         style={{ backgroundImage: `url(${accelerateBg})` }}
       >
@@ -109,8 +109,9 @@ export const Home = () => {
         </div>
       </section>
 
+
       {/* Beyond Borders */}
-      <section 
+      <section
         className="py-16 md:py-20 bg-fixed-overlay"
         style={{ backgroundImage: `url(${beyondBordersBg})` }}
       >
@@ -124,9 +125,10 @@ export const Home = () => {
         </div>
       </section>
 
+
       {/* Services Section */}
       {servicesContent && !servicesLoading && (
-        <section id="services" className="section-padding bg-background">
+        <section id="services" className="section-padding bg-background ">
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-16 fade-in-scroll">
               <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -138,25 +140,25 @@ export const Home = () => {
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {servicesContent.services.map((service: any, index: number) => {
-              const IconComponent = iconMap[service.icon as keyof typeof iconMap];
-              return (
-                <Card key={index} className="fade-in-scroll hover:shadow-lg transition-all duration-300 group border-l-4 border-l-primary hover:border-l-primary/80">
-                  <CardHeader className="text-center pb-4">
-                    <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
-                      {IconComponent && <IconComponent className="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-300" />}
-                    </div>
-                    <CardTitle className="text-xl font-bold text-primary group-hover:text-primary/80 transition-colors">
-                      {service.title}
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <p className="text-muted-foreground leading-relaxed">{service.description}</p>
-                  </CardContent>
-                </Card>
-              );
-            })}
+                const IconComponent = iconMap[service.icon as keyof typeof iconMap];
+                return (
+                  <Card key={index} className="fade-in-scroll hover:shadow-lg transition-all duration-300 group border-l-4 border-l-primary hover:border-l-primary/80">
+                    <CardHeader className="text-center pb-4">
+                      <div className="w-16 h-16 mx-auto mb-4 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
+                        {IconComponent && <IconComponent className="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-300" />}
+                      </div>
+                      <CardTitle className="text-xl font-bold text-primary group-hover:text-primary/80 transition-colors">
+                        {service.title}
+                      </CardTitle>
+                    </CardHeader>
+                    <CardContent>
+                      <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+                    </CardContent>
+                  </Card>
+                );
+              })}
+            </div>
           </div>
-        </div>
         </section>
       )}
 
@@ -167,13 +169,15 @@ export const Home = () => {
             <div className={`grid lg:grid-cols-2 gap-12 items-center fade-in-scroll ${isRTL ? 'lg:grid-cols-[1fr_auto]' : 'lg:grid-cols-[auto_1fr]'}`}>
               {!isRTL && (
                 <div className="lg:order-1">
-                  <img 
-                    src={chairmanPortrait} 
-                    alt="Chairman" 
-                    className="w-full max-w-md mx-auto rounded-lg shadow-lg"
+                  <img
+                    src={chairmanPortrait}
+                    alt="Chairman"
+                    className="w-full max-w-[16rem] mx-auto rounded-lg shadow-lg"
                   />
                 </div>
-              )}
+              )
+              }
+
               <div className={`lg:order-2 ${isRTL ? 'text-right' : 'text-left'}`}>
                 <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
                   {content.chairman.title}
@@ -184,10 +188,10 @@ export const Home = () => {
               </div>
               {isRTL && (
                 <div className="lg:order-1">
-                  <img 
-                    src={chairmanPortrait} 
-                    alt="Chairman" 
-                    className="w-full max-w-md mx-auto rounded-lg shadow-lg"
+                  <img
+                    src={chairmanPortrait}
+                    alt="Chairman"
+                    className="max-w-[16rem] mx-auto rounded-lg shadow-lg"
                   />
                 </div>
               )}
@@ -203,10 +207,10 @@ export const Home = () => {
             <div className={`grid lg:grid-cols-2 gap-12 items-center fade-in-scroll ${isRTL ? 'lg:grid-cols-[auto_1fr]' : 'lg:grid-cols-[1fr_auto]'}`}>
               {!isRTL && (
                 <div className="lg:order-2">
-                  <img 
-                    src={partnerPortrait} 
-                    alt="Managing Partner" 
-                    className="w-full max-w-md mx-auto rounded-lg shadow-lg"
+                  <img
+                    src={partnerPortrait}
+                    alt="Managing Partner"
+                    className="w-full max-w-[16rem] mx-auto rounded-lg shadow-lg"
                   />
                 </div>
               )}
@@ -220,10 +224,10 @@ export const Home = () => {
               </div>
               {isRTL && (
                 <div className="lg:order-2">
-                  <img 
-                    src={partnerPortrait} 
-                    alt="Managing Partner" 
-                    className="w-full max-w-md mx-auto rounded-lg shadow-lg"
+                  <img
+                    src={partnerPortrait}
+                    alt="Managing Partner"
+                    className="max-w-[16rem] mx-auto rounded-lg shadow-lg"
                   />
                 </div>
               )}

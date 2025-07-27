@@ -43,7 +43,7 @@ All colors MUST be HSL.
     --brand-green: 150 100% 25%;
     --brand-gold: 41 62% 80%;
     --text-overlay: 0 0% 100%;
-    --overlay-dark: 0 0% 0% / 0.5;
+    --overlay-dark: #0000007f;
 
     --sidebar-background: 0 0% 98%;
 
@@ -123,9 +123,11 @@ All colors MUST be HSL.
 
   /* Fixed Background Utility */
   .bg-fixed-overlay {
-    @apply relative bg-cover bg-center bg-fixed;
-    min-height: 100vh;
+    @apply relative bg-cover bg-center;
+    background-attachment: scroll; /* important! let JS handle the effect */
+    background-repeat: no-repeat;
   }
+  
   
   .bg-fixed-overlay::after {
     content: '';

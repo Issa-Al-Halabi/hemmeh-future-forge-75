@@ -32,7 +32,7 @@ export const Footer = () => {
                 href="https://www.instagram.com/hmmh.co/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                className="mx-2 text-primary-foreground/80 hover:text-primary-foreground transition-colors"
               >
                 <Instagram size={20} />
               </a>
@@ -40,7 +40,7 @@ export const Footer = () => {
                 href="https://www.linkedin.com/company/hmmh-consulting/" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                className="mx-2 text-primary-foreground/80 hover:text-primary-foreground transition-colors"
               >
                 <Linkedin size={20} />
               </a>
@@ -48,7 +48,7 @@ export const Footer = () => {
                 href="https://www.facebook.com/hmmh.co" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                className="mx-2 text-primary-foreground/80 hover:text-primary-foreground transition-colors"
               >
                 <Facebook size={20} />
               </a>
@@ -56,7 +56,7 @@ export const Footer = () => {
                 href="https://x.com/HmmH_co" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                className="mx-2 text-primary-foreground/80 hover:text-primary-foreground transition-colors"
               >
                 <Twitter size={20} />
               </a>
@@ -64,13 +64,14 @@ export const Footer = () => {
           </div>
           
           {/* Contact Info */}
-          <div className={`${isRTL ? 'text-left md:text-right' : 'text-right md:text-right'} space-y-2`}>
-            <p className="text-primary-foreground/80">
+          <div className={`${isRTL ? 'text-left md:text-right' : 'text-right md:text-right'} space-y-2 text-center`}>
+            <a href={`mailto:office@hmmh.consulting`} className="text-primary-foreground/80">
               office@hmmh.consulting
-            </p>
-            <p className="text-primary-foreground/80">
+            </a>
+            <br />
+            <a href={`tel:+963113310226`} className="text-primary-foreground/80" dir='ltr'>
               +963 11 331 02 26
-            </p>
+            </a>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
               {language === 'ar' 
                 ? 'أبو رمانة، ساحة النجمة، خلف السفارة اليابانية' 

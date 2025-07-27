@@ -177,7 +177,7 @@ export const Contact = () => {
                   
                   <div className="flex items-center gap-4">
                     <Phone className="text-primary flex-shrink-0" size={24} />
-                    <a href={`tel:${content.contact.phone}`} className="text-lg hover:text-primary transition-colors cursor-pointer">
+                    <a href={`tel:${content.contact.phone}`} className="text-lg hover:text-primary transition-colors cursor-pointer" dir='ltr'>
                       {content.contact.phone}
                     </a>
                   </div>

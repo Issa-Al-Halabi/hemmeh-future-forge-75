@@ -45,13 +45,13 @@ export const MobileSidebar = ({ isOpen, onOpenChange }: MobileSidebarProps) => {
       </SheetTrigger>
       <SheetContent 
         side={isRTL ? "left" : "right"} 
-        className={`w-80 p-0 ${fontClass} ${isRTL ? 'text-right' : 'text-left'}`}
+        className={`w-60 overflow-auto p-0 ${fontClass} ${isRTL ? 'text-right' : 'text-left'}`}
       >
         <div className="flex flex-col h-full">
           {/* Header with Logo and Close Button */}
           <div className="flex items-center justify-center p-6 border-b">
             <Link to="/" onClick={() => onOpenChange(false)}>
-              <img src={logo} alt={navData.brand} className="h-48 w-48" />
+              <img src={logo} alt={navData.brand} className="h-32 w-32" />
             </Link>
          
           </div>
