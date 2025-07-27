@@ -165,37 +165,18 @@ export const Home = () => {
       {/* Chairman Message */}
       {content?.chairman && (
         <section className="section-padding bg-muted">
-          <div className="max-w-6xl mx-auto">
-            <div className={`grid lg:grid-cols-2 gap-12 items-center fade-in-scroll ${isRTL ? 'lg:grid-cols-[1fr_auto]' : 'lg:grid-cols-[auto_1fr]'}`}>
-              {!isRTL && (
-                <div className="lg:order-1">
-                  <img
-                    src={chairmanPortrait}
-                    alt="Chairman"
-                    className="w-full max-w-[16rem] mx-auto rounded-lg shadow-lg"
-                  />
-                </div>
-              )
-              }
-
-              <div className={`lg:order-2 ${isRTL ? 'text-right' : 'text-left'}`}>
-                <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-                  {content.chairman.title}
-                </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  {content.chairman.message}
-                </p>
-              </div>
-              {isRTL && (
-                <div className="lg:order-1">
-                  <img
-                    src={chairmanPortrait}
-                    alt="Chairman"
-                    className="max-w-[16rem] mx-auto rounded-lg shadow-lg"
-                  />
-                </div>
-              )}
-            </div>
+          <div className="max-w-4xl mx-auto text-center fade-in-scroll">
+            <img
+              src={chairmanPortrait}
+              alt="Chairman"
+              className="w-48 h-48 mx-auto rounded-lg shadow-lg mb-8 object-cover"
+            />
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
+              {content.chairman.title}
+            </h2>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              {content.chairman.message}
+            </p>
           </div>
         </section>
       )}
@@ -203,35 +184,18 @@ export const Home = () => {
       {/* Managing Partner Message */}
       {content?.partner && (
         <section className="section-padding bg-background">
-          <div className="max-w-6xl mx-auto">
-            <div className={`grid lg:grid-cols-2 gap-12 items-center fade-in-scroll ${isRTL ? 'lg:grid-cols-[auto_1fr]' : 'lg:grid-cols-[1fr_auto]'}`}>
-              {!isRTL && (
-                <div className="lg:order-2">
-                  <img
-                    src={partnerPortrait}
-                    alt="Managing Partner"
-                    className="w-full max-w-[16rem] mx-auto rounded-lg shadow-lg"
-                  />
-                </div>
-              )}
-              <div className={`lg:order-1 ${isRTL ? 'text-right' : 'text-left'}`}>
-                <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-                  {content.partner.title}
-                </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  {content.partner.message}
-                </p>
-              </div>
-              {isRTL && (
-                <div className="lg:order-2">
-                  <img
-                    src={partnerPortrait}
-                    alt="Managing Partner"
-                    className="max-w-[16rem] mx-auto rounded-lg shadow-lg"
-                  />
-                </div>
-              )}
-            </div>
+          <div className="max-w-4xl mx-auto text-center fade-in-scroll">
+            <img
+              src={partnerPortrait}
+              alt="Managing Partner"
+              className="w-48 h-48 mx-auto rounded-lg shadow-lg mb-8 object-cover"
+            />
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
+              {content.partner.title}
+            </h2>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              {content.partner.message}
+            </p>
           </div>
         </section>
       )}

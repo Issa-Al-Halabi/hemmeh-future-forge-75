@@ -2,10 +2,10 @@ import { useEffect, useRef } from 'react';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { useContent } from '@/hooks/useContent';
 import { LoadingLogo } from '@/components/LoadingLogo';
-import futureNowHeader from '@/assets/future-now-header.jpg';
-import futureNowBg from '@/assets/future-now-bg.jpg';
-import scaleFutureBg from '@/assets/scale-future-bg.jpg';
-import knowledgeBg from '@/assets/knowledge-bg.jpg';
+import futureNowDarkHeader from '@/assets/future-now-dark-header.jpg';
+import scaleFutureLightBg from '@/assets/scale-future-light-bg.jpg';
+import economicAdvantageDarkBg from '@/assets/economic-advantage-dark-bg.jpg';
+import knowledgeLightBg from '@/assets/knowledge-light-bg.jpg';
 
 export const FutureNow = () => {
   const { fontClass, isRTL } = useLanguage();
@@ -47,7 +47,7 @@ export const FutureNow = () => {
       {/* Header Section */}
       <section 
         className="min-h-screen bg-fixed-overlay flex items-center justify-center"
-        style={{ backgroundImage: `url(${futureNowHeader})` }}
+        style={{ backgroundImage: `url(${futureNowDarkHeader})` }}
       >
         <div className="text-center max-w-4xl mx-auto px-4 fade-in-scroll">
           <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-text-overlay mb-6">
@@ -65,7 +65,7 @@ export const FutureNow = () => {
       {/* Scale the Future */}
       <section 
         className="py-16 md:py-20 bg-fixed-overlay"
-        style={{ backgroundImage: `url(${scaleFutureBg})` }}
+        style={{ backgroundImage: `url(${scaleFutureLightBg})` }}
       >
         <div className="max-w-4xl mx-auto text-center fade-in-scroll">
           <h2 className="text-3xl md:text-4xl font-bold text-text-overlay mb-8">
@@ -80,7 +80,7 @@ export const FutureNow = () => {
       {/* Economic Advantage */}
       <section 
         className="py-16 md:py-20 bg-fixed-overlay"
-        style={{ backgroundImage: `url(${futureNowBg})` }}
+        style={{ backgroundImage: `url(${economicAdvantageDarkBg})` }}
       >
         <div className="max-w-4xl mx-auto text-center fade-in-scroll">
           <h2 className="text-3xl md:text-4xl font-bold text-text-overlay mb-6">
@@ -98,7 +98,7 @@ export const FutureNow = () => {
       {/* Growth Through Knowledge */}
       <section 
         className="py-16 md:py-20 bg-fixed-overlay"
-        style={{ backgroundImage: `url(${knowledgeBg})` }}
+        style={{ backgroundImage: `url(${knowledgeLightBg})` }}
       >
         <div className="max-w-4xl mx-auto text-center fade-in-scroll">
           <h2 className="text-3xl md:text-4xl font-bold text-text-overlay mb-6">

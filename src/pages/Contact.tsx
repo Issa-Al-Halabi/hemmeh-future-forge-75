@@ -8,7 +8,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Mail, Phone, MapPin } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 import { LoadingLogo } from '@/components/LoadingLogo';
-import contactHeaderBg from '@/assets/contact-new-header.jpg';
+
 
 export const Contact = () => {
   const { fontClass, isRTL } = useLanguage();
@@ -68,15 +68,12 @@ export const Contact = () => {
   return (
     <div className={`${fontClass} ${isRTL ? 'text-right' : 'text-left'} pt-16`}>
       {/* Hero Header */}
-      <section 
-        className="min-h-[60vh] bg-fixed-overlay flex items-center justify-center"
-        style={{ backgroundImage: `url(${contactHeaderBg})` }}
-      >
+      <section className="pt-16 pb-8 bg-background">
         <div className="text-center max-w-4xl mx-auto px-4 fade-in-scroll">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-text-overlay mb-6">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
             {content.hero.title}
           </h1>
-          <p className="text-xl md:text-2xl text-text-overlay/90">
+          <p className="text-xl md:text-2xl text-muted-foreground">
             {content.hero.subtitle}
           </p>
         </div>
