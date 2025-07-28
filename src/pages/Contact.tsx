@@ -67,17 +67,6 @@ export const Contact = () => {
 
   return (
     <div className={`${fontClass} ${isRTL ? 'text-right' : 'text-left'} pt-16`}>
-      {/* Hero Header */}
-      <section className="pt-16 pb-8 bg-background">
-        <div className="text-center max-w-4xl mx-auto px-4 fade-in-scroll">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-            {content.hero.title}
-          </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground">
-            {content.hero.subtitle}
-          </p>
-        </div>
-      </section>
 
       {/* Contact Form & Info */}
       <section className="section-padding bg-background">

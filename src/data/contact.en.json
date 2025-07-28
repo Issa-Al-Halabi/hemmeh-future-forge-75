@@ -1,15 +1,11 @@
 {
   "title": "Contact Us",
-  "hero": {
-    "title": "Contact us today",
-    "subtitle": "Let us begin together the journey of achieving your economic and investment goals with confidence and a clear vision. We are here to help you succeed!"
-  },
   "form": {
     "name": "Name",
     "email": "Email",
     "subject": "Subject",
     "message": "Message",
-    "send": "Send",
+    "send": "Build your future with us",
     "namePlaceholder": "Your full name",
     "emailPlaceholder": "Your email address",
     "subjectPlaceholder": "Subject of inquiry",

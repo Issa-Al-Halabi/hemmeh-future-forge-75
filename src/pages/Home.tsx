@@ -165,18 +165,30 @@ export const Home = () => {
       {/* Chairman Message */}
       {content?.chairman && (
         <section className="section-padding bg-muted">
-          <div className="max-w-4xl mx-auto text-center fade-in-scroll">
-            <img
-              src={chairmanPortrait}
-              alt="Chairman"
-              className="w-48 h-48 mx-auto rounded-lg shadow-lg mb-8 object-cover"
-            />
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-              {content.chairman.title}
-            </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              {content.chairman.message}
-            </p>
+          <div className="max-w-7xl mx-auto fade-in-scroll">
+            <div className="flex flex-col md:flex-row items-center md:items-center gap-8 md:gap-16">
+              <div className="w-full md:w-1/3 text-center md:text-left  flex flex-col items-center justify-center">
+                <img
+                  src={chairmanPortrait}
+                  alt="Chairman"
+                  className="w-64 h-64 md:w-[400px] md:h-[400px] mx-auto md:mx-0 rounded-lg shadow-lg mb-4 object-cover"
+                />
+                <h3 className="text-xl font-bold text-primary mb-1">
+                  {content.chairman.title}
+                </h3>
+                <p className="text-muted-foreground">
+                  {content.chairman.position}
+                </p>
+              </div>
+              <div className="w-full md:w-2/3">
+                {/* <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6 text-center md:text-left">
+                  {content.chairman.title}
+                </h2> */}
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  {content.chairman.message}
+                </p>
+              </div>
+            </div>
           </div>
         </section>
       )}
@@ -184,18 +196,30 @@ export const Home = () => {
       {/* Managing Partner Message */}
       {content?.partner && (
         <section className="section-padding bg-background">
-          <div className="max-w-4xl mx-auto text-center fade-in-scroll">
-            <img
-              src={partnerPortrait}
-              alt="Managing Partner"
-              className="w-48 h-48 mx-auto rounded-lg shadow-lg mb-8 object-cover"
-            />
-            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6">
-              {content.partner.title}
-            </h2>
-            <p className="text-lg text-muted-foreground leading-relaxed">
-              {content.partner.message}
-            </p>
+          <div className="max-w-7xl mx-auto fade-in-scroll">
+            <div className="flex flex-col md:flex-row-reverse items-center md:items-center gap-8 md:gap-16">
+              <div className="w-full md:w-1/3 text-center md:text-right flex flex-col items-center justify-center">
+                <img
+                  src={partnerPortrait}
+                  alt="Managing Partner"
+                  className="w-64 h-64 md:w-[400px] md:h-[400px] mx-auto md:mx-0 md:ml-auto rounded-lg mb-4 object-contain"
+                />
+                <h3 className="text-xl font-bold text-primary mb-1">
+                  {content.partner.title}
+                </h3>
+                <p className="text-muted-foreground">
+                  {content.partner.position}
+                </p>
+              </div>
+              <div className="w-full md:w-2/3">
+                {/* <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6 text-center md:text-left">
+                  {content.partner.title}
+                </h2> */}
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  {content.partner.message}
+                </p>
+              </div>
+            </div>
           </div>
         </section>
       )}
