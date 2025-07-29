@@ -3,9 +3,9 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { useContent } from '@/hooks/useContent';
 import { LoadingLogo } from '@/components/LoadingLogo';
 import futureNowDarkHeader from '@/assets/future-now-dark-header.jpg';
-import scaleFutureLightBg from '@/assets/scale-future-light-bg.jpg';
-import economicAdvantageDarkBg from '@/assets/economic-advantage-dark-bg.jpg';
-import knowledgeLightBg from '@/assets/knowledge-light-bg.jpg';
+import scaleFutureLightBg from '@/assets/scale-future.jpg';
+import economicAdvantageDarkBg from '@/assets/economic-advantage.jpg';
+import knowledgeLightBg from '@/assets/knowledge.jpg';
 
 export const FutureNow = () => {
   const { fontClass, isRTL } = useLanguage();
@@ -64,7 +64,7 @@ export const FutureNow = () => {
 
       {/* Scale the Future */}
       <section 
-        className="py-16 md:py-20 bg-fixed-overlay"
+        className="px-2 py-16 md:py-20 bg-fixed-overlay"
         style={{ backgroundImage: `url(${scaleFutureLightBg})` }}
       >
         <div className="max-w-4xl mx-auto text-center fade-in-scroll">
@@ -79,7 +79,7 @@ export const FutureNow = () => {
 
       {/* Economic Advantage */}
       <section 
-        className="py-16 md:py-20 bg-fixed-overlay"
+        className="px-2 py-16 md:py-20 bg-fixed-overlay"
         style={{ backgroundImage: `url(${economicAdvantageDarkBg})` }}
       >
         <div className="max-w-4xl mx-auto text-center fade-in-scroll">
@@ -97,7 +97,7 @@ export const FutureNow = () => {
 
       {/* Growth Through Knowledge */}
       <section 
-        className="py-16 md:py-20 bg-fixed-overlay"
+        className="px-2 py-16 md:py-20 bg-fixed-overlay"
         style={{ backgroundImage: `url(${knowledgeLightBg})` }}
       >
         <div className="max-w-4xl mx-auto text-center fade-in-scroll">

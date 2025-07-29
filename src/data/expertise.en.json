@@ -1,6 +1,6 @@
 {
   "title": "Our Expertise",
-  "subtitle": "We draw on deep and diverse Saudi expertise, harnessing it to provide exceptional solutions that inspire success and achieve fruitful impact.",
+  "subtitle": "We draw on deep and diverse Saudi-Syrian expertise, harnessing it to provide exceptional solutions that inspire success and achieve fruitful impact.",
   "areas": [
     {
       "title": "Economic Analysis & Forecasting",
@@ -26,5 +26,8 @@
       "title": "Financial Modeling & Valuation",
       "description": "Building advanced financial models to evaluate companies and projects and determine fair value of investments."
     }
-  ]
+  ],
+  "clients": {
+    "title": "Our Clients"
+  }
 }

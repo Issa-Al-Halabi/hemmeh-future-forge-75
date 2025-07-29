@@ -4,9 +4,9 @@ import { useContent } from '@/hooks/useContent';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { CheckCircle } from 'lucide-react';
 import { LoadingLogo } from '@/components/LoadingLogo';
-import aboutHeaderBg from '@/assets/about-us-saudi-palms-header.jpg';
-import missionBg from '@/assets/mission-new-bg.jpg';
-import visionBg from '@/assets/vision-saudi-culture-bg.jpg';
+import aboutHeaderBg from '@/assets/about-us-bg.jpg';
+import missionBg from '@/assets/mission-bg.jpg';
+import visionBg from '@/assets/vision-bg.jpg';
 
 export const About = () => {
   const { fontClass, isRTL } = useLanguage();

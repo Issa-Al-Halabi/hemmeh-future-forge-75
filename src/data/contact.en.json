@@ -5,11 +5,16 @@
     "email": "Email",
     "subject": "Subject",
     "message": "Message",
-    "send": "Build your future with us",
+    "send": "LET'S CHANGE THE FUTURE",
     "namePlaceholder": "Your full name",
     "emailPlaceholder": "Your email address",
     "subjectPlaceholder": "Subject of inquiry",
-    "messagePlaceholder": "How can we help you?"
+    "messagePlaceholder": "How can we help you?",
+    "sending": "Sending...",
+    "successTitle": "Message Sent",
+    "successMessage": "Thank you for your message. We'll get back to you soon.",
+    "errorTitle": "Error",
+    "errorMessage": "Failed to send message. Please try again."
   },
   "contact": {
     "title": "Contact Information",  

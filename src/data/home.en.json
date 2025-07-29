@@ -1,6 +1,6 @@
 {
   "hero": {
-    "title": "Visualising the future?",
+    "title": "VISUALISING THE FUTURE?",
     "subtitle": "Join us in. LEADING THE CHANGE THROUGH STRATEGIC CONSULTING",
     "button": "Explore Services"
   },
@@ -30,5 +30,41 @@
     "title": "Hasan Balouli",
     "position": "Managing Partner",
     "message": "We leverage the power of strategic investments to drive growth and innovation across key sectors. With our deep-rooted expertise and extensive networks in both the Syrian Arab Republic and the Kingdom of Saudi Arabia, we are uniquely positioned to help clients navigate these dynamic markets. Our global connections with world-class players in Energy, Infrastructure, Construction, and Telecommunications enable us to deliver solutions that are not only locally relevant but also globally impactful. By blending local insights with international expertise, we identify unique opportunities and unlock value that fosters long-term success. We are committed to building lasting relationships, creating sustainable impact, and guiding our clients toward a prosperous future."
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "We provide comprehensive economic and investment consulting services",
+    "services": [
+      {
+        "title": "Economic Consulting",
+        "description": "Comprehensive analysis of economic conditions and strategic recommendations for sustainable growth",
+        "icon": "BarChart3"
+      },
+      {
+        "title": "Investment Advisory",
+        "description": "Guiding investors to make informed and effective investment decisions that achieve optimal returns",
+        "icon": "TrendingUp"
+      },
+      {
+        "title": "Market Research & Feasibility Studies",
+        "description": "In-depth market analysis and preparation of economic feasibility studies for projects and investments",
+        "icon": "LineChart"
+      },
+      {
+        "title": "Financial Strategy Consulting",
+        "description": "Developing comprehensive financial strategies that support long-term growth and expansion goals",
+        "icon": "Target"
+      },
+      {
+        "title": "Business Development Consulting",
+        "description": "Supporting companies in developing growth strategies and improving operational performance",
+        "icon": "Rocket"
+      },
+      {
+        "title": "Policy Analysis & Economic Impact Assessment",
+        "description": "Evaluating the impact of economic policies and providing recommendations for decision makers",
+        "icon": "FileText"
+      }
+    ]
   }
 }

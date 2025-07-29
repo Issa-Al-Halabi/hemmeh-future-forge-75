@@ -9,11 +9,16 @@
     "email": "البريد الإلكتروني",
     "subject": "الموضوع",
     "message": "الرسالة",
-    "send": "ارسم مستقبلك معنا",
+    "send": "لنغير المستقبل معاً",
     "namePlaceholder": "اسمك الكامل",
     "emailPlaceholder": "بريدك الإلكتروني",
     "subjectPlaceholder": "موضوع الاستفسار",
-    "messagePlaceholder": "كيف يمكننا مساعدتك؟"
+    "messagePlaceholder": "كيف يمكننا مساعدتك؟",
+    "sending": "جاري الإرسال...",
+    "successTitle": "تم الإرسال بنجاح",
+    "successMessage": "شكرا لك على الرسالة. سنقوم بالرد عليك في أقرب فرصة.",
+    "errorTitle": "خطأ",
+    "errorMessage": "فشل إرسال الرسالة. يرجى المحاولة مرة أخرى."
   },
   "contact": {
     "title": "معلومات الاتصال",

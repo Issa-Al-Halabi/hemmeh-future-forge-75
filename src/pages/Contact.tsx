@@ -5,16 +5,16 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { Mail, Phone, MapPin, Loader2 } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 import { LoadingLogo } from '@/components/LoadingLogo';
-
 
 export const Contact = () => {
   const { fontClass, isRTL } = useLanguage();
   const { content, loading } = useContent('contact');
   const observerRef = useRef<IntersectionObserver | null>(null);
-  
+  const [isSubmitting, setIsSubmitting] = useState(false);
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -47,14 +47,41 @@ export const Contact = () => {
     });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate form submission
-    toast({
-      title: "Message Sent",
-      description: "Thank you for your message. We'll get back to you soon.",
-    });
-    setFormData({ name: '', email: '', subject: '', message: '' });
+    setIsSubmitting(true);
+
+    try {
+      const response = await fetch('/backend/contact.php', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Something went wrong');
+      }
+
+      toast({
+        title: content.form.successTitle,
+        description: content.form.successMessage,
+        variant: "default",
+      });
+
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    } catch (error) {
+      toast({
+        title: content.form.errorTitle || "Error",
+        description: error instanceof Error ? error.message : content.form.errorMessage || "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (loading || !content) {
@@ -67,7 +94,6 @@ export const Contact = () => {
 
   return (
     <div className={`${fontClass} ${isRTL ? 'text-right' : 'text-left'} pt-16`}>
-
       {/* Contact Form & Info */}
       <section className="section-padding bg-background">
         <div className="max-w-6xl mx-auto">
@@ -90,9 +116,10 @@ export const Contact = () => {
                       onChange={handleInputChange}
                       placeholder={content.form.namePlaceholder}
                       required
+                      disabled={isSubmitting}
                     />
                   </div>
-                  
+
                   <div>
                     <label className="block text-sm font-medium mb-2">
                       {content.form.email}
@@ -104,9 +131,10 @@ export const Contact = () => {
                       onChange={handleInputChange}
                       placeholder={content.form.emailPlaceholder}
                       required
+                      disabled={isSubmitting}
                     />
                   </div>
-                  
+
                   <div>
                     <label className="block text-sm font-medium mb-2">
                       {content.form.subject}
@@ -118,9 +146,10 @@ export const Contact = () => {
                       onChange={handleInputChange}
                       placeholder={content.form.subjectPlaceholder}
                       required
+                      disabled={isSubmitting}
                     />
                   </div>
-                  
+
                   <div>
                     <label className="block text-sm font-medium mb-2">
                       {content.form.message}
@@ -132,11 +161,24 @@ export const Contact = () => {
                       placeholder={content.form.messagePlaceholder}
                       rows={6}
                       required
+                      disabled={isSubmitting}
                     />
                   </div>
-                  
-                  <Button type="submit" className="w-full" size="lg">
-                    {content.form.send}
+
+                  <Button
+                    type="submit"
+                    className="w-full"
+                    size="lg"
+                    disabled={isSubmitting}
+                  >
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                        {content.form.sending || "Sending..."}
+                      </>
+                    ) : (
+                      content.form.send
+                    )}
                   </Button>
                 </form>
               </CardContent>
@@ -153,14 +195,14 @@ export const Contact = () => {
                     <MapPin className="text-primary flex-shrink-0" size={24} />
                     <span className="text-lg">{content.contact.address}</span>
                   </div>
-                  
+
                   <div className="flex items-center gap-4">
                     <Mail className="text-primary flex-shrink-0" size={24} />
                     <a href={`mailto:${content.contact.email}`} className="text-lg hover:text-primary transition-colors cursor-pointer">
                       {content.contact.email}
                     </a>
                   </div>
-                  
+
                   <div className="flex items-center gap-4">
                     <Phone className="text-primary flex-shrink-0" size={24} />
                     <a href={`tel:${content.contact.phone}`} className="text-lg hover:text-primary transition-colors cursor-pointer" dir='ltr'>
