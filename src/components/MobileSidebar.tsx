@@ -93,17 +93,6 @@ export const MobileSidebar = ({ isOpen, onOpenChange }: MobileSidebarProps) => {
               {/* Phone */}
              
               <a 
-                href={`tel:${contactData.contact.phone2}`}
-                className="flex items-center gap-3 text-sm text-foreground hover:text-primary transition-colors"
-              >
-                <Phone size={16} />
-                <span
-                 dir="ltr"
-                >{contactData.contact.phone2}</span>
-              </a>
-
-             
-              <a 
                 href={`tel:${contactData.contact.phone}`}
                 className="flex items-center gap-3 text-sm text-foreground hover:text-primary transition-colors"
               >

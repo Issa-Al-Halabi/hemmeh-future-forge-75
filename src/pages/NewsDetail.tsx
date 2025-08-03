@@ -40,15 +40,6 @@ export const NewsDetail = () => {
     );
   }
 
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString(isRTL ? 'ar-SA' : 'en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
-  };
-
   const BackIcon = isRTL ? ArrowRight : ArrowLeft;
 
   const openLightbox = (index: number) => {
@@ -62,16 +53,7 @@ export const NewsDetail = () => {
 
   return (
     <div className={`min-h-screen bg-background ${fontClass}`}>
-      {/* Header */}
-      <div className="bg-muted/30 py-8">
-        <div className="max-w-4xl mx-auto px-4">
-          <Link to="/news" className="inline-flex items-center gap-2 text-primary hover:text-primary/80 transition-colors mb-6">
-            <BackIcon size={20} />
-            <span>{isRTL ? 'العودة للأخبار' : 'Back to News'}</span>
-          </Link>
-        </div>
-      </div>
-
+    
       {/* Article Content */}
       <article className="max-w-4xl mx-auto px-4 py-12">
         {/* Hero Image */}
@@ -87,7 +69,7 @@ export const NewsDetail = () => {
         <div className="mb-8">
           <div className="flex items-center gap-2 text-muted-foreground mb-4">
             <Calendar size={18} />
-            <span>{formatDate(article.date)}</span>
+            <span>{article.date}</span>
           </div>
           
           <h1 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
@@ -100,7 +82,7 @@ export const NewsDetail = () => {
         </div>
 
         {/* Article Content */}
-        <div className="prose prose-lg max-w-none mb-12">
+        <div className="prose prose-lg max-w-none mb-12 text-justify">
           {article.content.split('\n\n').map((paragraph: string, index: number) => (
             <p key={index} className="mb-6 leading-relaxed text-foreground">
               {paragraph}

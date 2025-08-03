@@ -70,10 +70,6 @@ export const Footer = () => {
               office@hmmh.consulting
             </a>
             <br />
-            <a href={`tel:+963986225500`} className="text-primary-foreground/80" dir='ltr'>
-              +963 986 225 500
-            </a>
-            <br />
             <a href={`tel:+963113310226`} className="text-primary-foreground/80" dir='ltr'>
               +963 11 331 02 26
             </a>

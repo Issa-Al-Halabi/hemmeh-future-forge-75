@@ -1,56 +1,33 @@
 {
   "header": {
-    "title": "Latest News & Updates",
-    "subtitle": "Stay informed about HmmH's latest developments, achievements, and industry insights"
+    "title": "Latest News",
+    "subtitle": "Stay updated with our latest announcements and developments"
   },
   "news": [
     {
-      "id": "1",
-      "title": "HmmH Expands Strategic Partnership in Saudi Arabia",
-      "subtitle": "New collaboration strengthens our commitment to the Kingdom's Vision 2030",
-      "date": "2024-01-15",
-      "image": "https://images.unsplash.com/photo-1466442929976-97f336a657be?w=800&h=600&fit=crop",
-      "content": "HmmH announces a significant expansion of its strategic partnerships in Saudi Arabia, aligning with the Kingdom's Vision 2030 initiative. This partnership will focus on digital transformation and innovation across multiple sectors.\n\nThe collaboration represents a major milestone in our commitment to supporting Saudi Arabia's economic diversification goals. Through this partnership, we will leverage cutting-edge technology solutions to drive sustainable growth and innovation.\n\nOur team of experts will work closely with local partners to implement world-class solutions that meet the unique needs of the Saudi market. This initiative reinforces our position as a leading technology partner in the region.",
+      "id": "cambridge-joint-venture",
+      "title": "Launch of Joint Venture Between Himmah Consulting and Cambridge Consulting Services",
+      "subtitle": "A strategic partnership to enhance joint capabilities in studies, research, and international consulting",
+      "date": "2025/08/01",
+      "image": "/partners/cambridge.png",
+      "content": "Himmah Consulting is proud to announce the formation of a joint venture with Cambridge Consulting Services, a globally recognized consulting firm with an extensive international presence. This strategic partnership will enhance both firms' capabilities in the fields of studies, research, and international consulting.\n\nThe joint venture will focus on delivering comprehensive technical studies, strategic research, and innovative consulting solutions to support major projects across a variety of sectors worldwide. By combining expertise and resources, this collaboration aims to provide advanced, customized solutions that address the diverse needs of global markets while fostering sustainable development and the successful execution of large-scale projects.\n\nWith a global reach spanning multiple continents, Cambridge Consulting Services brings unmatched experience in working across borders, ensuring that the joint venture delivers high-impact, cutting-edge strategies for clients in various industries around the world.\n\nAt Himmah Consulting, we are excited about the opportunities this joint venture with Cambridge Consulting Services will create and look forward to delivering impactful results that contribute to business growth and innovation on a global scale.",
       "gallery": [
-        "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&h=600&fit=crop"
+        "/partners/cambridge.png",
+        "/partners/cambridge.png",
+        "/partners/cambridge.png"
       ]
     },
     {
-      "id": "2",
-      "title": "Digital Innovation Summit 2024",
-      "subtitle": "HmmH leads discussions on the future of digital transformation",
-      "date": "2024-01-10",
-      "image": "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=800&h=600&fit=crop",
-      "content": "HmmH proudly participated in the Digital Innovation Summit 2024, where our leadership team shared insights on the future of digital transformation and emerging technologies.\n\nThe summit brought together industry leaders, policymakers, and technology experts to discuss the latest trends and innovations shaping the digital landscape. Our presentations focused on sustainable technology solutions and their impact on business growth.\n\nKey topics covered included artificial intelligence, blockchain technology, and cloud computing solutions. The event reinforced our commitment to staying at the forefront of technological advancement.",
+      "id": "future-vision-2024",
+      "title": "Launch of Joint Venture Between Himmah Consulting and Cambridge Consulting Services",
+      "subtitle": "A strategic partnership to enhance joint capabilities in studies, research, and international consulting",
+      "date": "2025/08/01",
+      "image": "/partners/cambridge.png",
+      "content": "Himmah Consulting is proud to announce the formation of a joint venture with Cambridge Consulting Services, a globally recognized consulting firm with an extensive international presence. This strategic partnership will enhance both firms' capabilities in the fields of studies, research, and international consulting.\n\nThe joint venture will focus on delivering comprehensive technical studies, strategic research, and innovative consulting solutions to support major projects across a variety of sectors worldwide. By combining expertise and resources, this collaboration aims to provide advanced, customized solutions that address the diverse needs of global markets while fostering sustainable development and the successful execution of large-scale projects.\n\nWith a global reach spanning multiple continents, Cambridge Consulting Services brings unmatched experience in working across borders, ensuring that the joint venture delivers high-impact, cutting-edge strategies for clients in various industries around the world.\n\nAt Himmah Consulting, we are excited about the opportunities this joint venture with Cambridge Consulting Services will create and look forward to delivering impactful results that contribute to business growth and innovation on a global scale.",
       "gallery": [
-        "https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=600&fit=crop"
-      ]
-    },
-    {
-      "id": "3",
-      "title": "New Technology Center Opens in Riyadh",
-      "subtitle": "State-of-the-art facility enhances our regional capabilities",
-      "date": "2024-01-05",
-      "image": "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?w=800&h=600&fit=crop",
-      "content": "HmmH is excited to announce the opening of our new technology center in Riyadh, Saudi Arabia. This state-of-the-art facility represents a significant investment in our regional capabilities and commitment to the Saudi market.\n\nThe new center will serve as a hub for innovation, research, and development activities. It will house our growing team of engineers, developers, and technology specialists who are dedicated to delivering world-class solutions.\n\nEquipped with the latest technology infrastructure, the facility will enable us to better serve our clients across the region while fostering collaboration and innovation. This expansion marks an important milestone in our growth strategy.",
-      "gallery": [
-        "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1466442929976-97f336a657be?w=800&h=600&fit=crop"
-      ]
-    },
-    {
-      "id": "4",
-      "title": "Sustainable Technology Solutions Award",
-      "subtitle": "Recognition for our commitment to environmental innovation",
-      "date": "2023-12-20",
-      "image": "https://images.unsplash.com/photo-1500375592092-40eb2168fd21?w=800&h=600&fit=crop",
-      "content": "HmmH has been honored with the Sustainable Technology Solutions Award, recognizing our outstanding contributions to environmental innovation and sustainable business practices.\n\nThis award highlights our commitment to developing technology solutions that not only drive business success but also contribute to environmental sustainability. Our green technology initiatives have made a significant positive impact on reducing carbon footprint across various projects.\n\nWe continue to prioritize sustainability in all our operations and remain dedicated to developing innovative solutions that benefit both our clients and the environment.",
-      "gallery": [
-        "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?w=800&h=600&fit=crop",
-        "https://images.unsplash.com/photo-1482938289607-e9573fc25ebb?w=800&h=600&fit=crop"
+        "/partners/cambridge.png",
+        "/partners/cambridge.png",
+        "/partners/cambridge.png"
       ]
     }
   ]

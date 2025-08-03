@@ -20,15 +20,6 @@ export const News = () => {
     </div>;
   }
 
-  const formatDate = (dateString: string) => {
-    const date = new Date(dateString);
-    return date.toLocaleDateString(isRTL ? 'ar-SA' : 'en-US', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric'
-    });
-  };
-
   return (
     <div className={`min-h-screen bg-background ${fontClass}`}>
       {/* Header Section */}
@@ -55,7 +46,7 @@ export const News = () => {
       {/* News Grid Section */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {content.news.map((article: any) => (
               <Link 
                 key={article.id} 
@@ -73,7 +64,7 @@ export const News = () => {
                   <CardContent className="p-6">
                     <div className="flex items-center gap-2 text-sm text-muted-foreground mb-3">
                       <Calendar size={16} />
-                      <span>{formatDate(article.date)}</span>
+                      <span>{article.date}</span>
                     </div>
                     
                     <h3 className="text-xl font-semibold mb-3 line-clamp-2 group-hover:text-primary transition-colors">
