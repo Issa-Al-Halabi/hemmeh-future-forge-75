@@ -4,6 +4,7 @@ import { useLanguage } from '@/contexts/LanguageContext';
 import { LoadingLogo } from '@/components/LoadingLogo';
 import { Card, CardContent } from '@/components/ui/card';
 import { Calendar } from 'lucide-react';
+import newsHeaderBg from '@/assets/news-header-bg.jpg';
 
 export const News = () => {
   const { content, loading } = useContent('news');
@@ -35,7 +36,7 @@ export const News = () => {
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1466442929976-97f336a657be?w=1920&h=1080&fit=crop')`
+            backgroundImage: `url(${newsHeaderBg})`
           }}
         >
           <div className="absolute inset-0 bg-black/60" />

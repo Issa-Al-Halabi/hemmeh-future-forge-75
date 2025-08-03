@@ -1,14 +1,19 @@
 import { useParams, Link } from 'react-router-dom';
+import { useState } from 'react';
 import { useContent } from '@/hooks/useContent';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { LoadingLogo } from '@/components/LoadingLogo';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, ArrowRight, Calendar } from 'lucide-react';
+import Lightbox from 'yet-another-react-lightbox';
+import 'yet-another-react-lightbox/styles.css';
 
 export const NewsDetail = () => {
   const { id } = useParams();
   const { content, loading } = useContent('news');
   const { fontClass, isRTL } = useLanguage();
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxIndex, setLightboxIndex] = useState(0);
 
   if (loading) {
     return <LoadingLogo />;
@@ -45,6 +50,15 @@ export const NewsDetail = () => {
   };
 
   const BackIcon = isRTL ? ArrowRight : ArrowLeft;
+
+  const openLightbox = (index: number) => {
+    setLightboxIndex(index);
+    setLightboxOpen(true);
+  };
+
+  const lightboxSlides = article?.gallery?.map((image: string) => ({
+    src: image
+  })) || [];
 
   return (
     <div className={`min-h-screen bg-background ${fontClass}`}>
@@ -102,7 +116,11 @@ export const NewsDetail = () => {
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {article.gallery.map((image: string, index: number) => (
-                <div key={index} className="aspect-video rounded-lg overflow-hidden group cursor-pointer">
+                <div 
+                  key={index} 
+                  className="aspect-video rounded-lg overflow-hidden group cursor-pointer"
+                  onClick={() => openLightbox(index)}
+                >
                   <img
                     src={image}
                     alt={`Gallery image ${index + 1}`}
@@ -124,6 +142,16 @@ export const NewsDetail = () => {
           </Link>
         </div>
       </article>
+
+      {/* Lightbox */}
+      {lightboxSlides.length > 0 && (
+        <Lightbox
+          open={lightboxOpen}
+          close={() => setLightboxOpen(false)}
+          index={lightboxIndex}
+          slides={lightboxSlides}
+        />
+      )}
     </div>
   );
 };
