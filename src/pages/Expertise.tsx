@@ -160,7 +160,7 @@ export const Expertise = () => {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-center text-muted-foreground leading-relaxed">
                       {area.description}
                     </p>
                   </CardContent>

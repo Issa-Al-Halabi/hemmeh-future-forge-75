@@ -67,7 +67,7 @@ export const FutureNow = () => {
         className="px-2 py-16 md:py-20 bg-fixed-overlay"
         style={{ backgroundImage: `url(${scaleFutureLightBg})` }}
       >
-        <div className="max-w-4xl mx-auto text-center fade-in-scroll">
+        <div className="my-4 max-w-4xl mx-auto text-center fade-in-scroll">
           <h2 className="text-3xl md:text-4xl font-bold text-text-overlay mb-8">
             {content.scaleSection.title}
           </h2>
@@ -82,7 +82,7 @@ export const FutureNow = () => {
         className="px-2 py-16 md:py-20 bg-fixed-overlay"
         style={{ backgroundImage: `url(${economicAdvantageDarkBg})` }}
       >
-        <div className="max-w-4xl mx-auto text-center fade-in-scroll">
+        <div className="my-4 max-w-4xl mx-auto text-center fade-in-scroll">
           <h2 className="text-3xl md:text-4xl font-bold text-text-overlay mb-6">
             {content.economicAdvantage.title}
           </h2>
@@ -100,7 +100,7 @@ export const FutureNow = () => {
         className="px-2 py-16 md:py-20 bg-fixed-overlay"
         style={{ backgroundImage: `url(${knowledgeLightBg})` }}
       >
-        <div className="max-w-4xl mx-auto text-center fade-in-scroll">
+        <div className="my-4 max-w-4xl mx-auto text-center fade-in-scroll">
           <h2 className="text-3xl md:text-4xl font-bold text-text-overlay mb-6">
             {content.knowledge.title}
           </h2>

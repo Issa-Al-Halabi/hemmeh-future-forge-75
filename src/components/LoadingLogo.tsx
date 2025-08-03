@@ -15,7 +15,7 @@ export const LoadingLogo = ({ size = 'md' }: LoadingLogoProps) => {
     <div className="flex items-center justify-center">
       <img
         src={logo}
-        alt="Hemmeh Logo"
+        alt="HmmH Logo"
         className={`${sizeClasses[size]} animate-pulse hover:scale-105 transition-transform duration-300`}
       />
     </div>

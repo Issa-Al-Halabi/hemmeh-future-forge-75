@@ -98,11 +98,11 @@ export const Home = () => {
         className="py-16 md:py-20 bg-fixed-overlay"
         style={{ backgroundImage: `url(${beyondBordersBg})` }}
       >
-        <div className="max-w-4xl mx-auto text-center fade-in-scroll">
+        <div className="my-4 max-w-4xl mx-auto text-center fade-in-scroll">
           <h2 className="text-4xl md:text-5xl font-bold text-text-overlay mb-6">
             {content?.beyondBorders?.title || ''}
           </h2>
-          <p className="text-xl text-text-overlay/90">
+          <p className="p-2 text-xl text-text-overlay/90">
             {content?.beyondBorders?.subtitle || ''}
           </p>
         </div>
@@ -113,7 +113,7 @@ export const Home = () => {
         className="py-16 md:py-20 bg-fixed-overlay"
         style={{ backgroundImage: `url(${accelerateBg})` }}
       >
-        <div className="max-w-4xl mx-auto text-center fade-in-scroll">
+        <div className="my-4 max-w-4xl mx-auto text-center fade-in-scroll">
           <h2 className="text-4xl md:text-5xl font-bold text-text-overlay mb-6">
             {content?.accelerate?.title || ''}
           </h2>
@@ -148,7 +148,7 @@ export const Home = () => {
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <p className="text-muted-foreground leading-relaxed">{service.description}</p>
+                    <p className="text-muted-foreground leading-relaxed text-center break-words">{service.description}</p>
                   </CardContent>
                 </Card>
               );
@@ -179,7 +179,7 @@ export const Home = () => {
                 {/* <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6 text-center md:text-left">
                   {content.chairman.title}
                 </h2> */}
-                <p className="text-lg text-muted-foreground leading-relaxed text-justify break-words">
+                <p className="p-2 text-lg text-muted-foreground leading-relaxed text-justify break-words">
                   {content.chairman.message}
                 </p>
               </div>
@@ -210,7 +210,7 @@ export const Home = () => {
                 {/* <h2 className="text-3xl md:text-4xl font-bold text-primary mb-6 text-center md:text-left">
                   {content.partner.title}
                 </h2> */}
-                <p className="text-lg text-muted-foreground leading-relaxed text-justify break-words">
+                <p className="p-2 text-lg text-muted-foreground leading-relaxed text-justify break-words">
                   {content.partner.message}
                 </p>
               </div>
