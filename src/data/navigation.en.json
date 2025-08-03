@@ -18,6 +18,10 @@
       "path": "/expertise"
     },
     {
+      "name": "News",
+      "path": "/news"
+    },
+    {
       "name": "Connect",
       "path": "/contact"
     }

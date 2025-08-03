@@ -18,6 +18,10 @@
       "path": "/expertise"
     },
     {
+      "name": "الأخبار",
+      "path": "/news"
+    },
+    {
       "name": "تواصل",
       "path": "/contact"
     }

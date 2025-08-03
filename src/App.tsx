@@ -12,6 +12,8 @@ import { About } from "./pages/About";
 import { Expertise } from "./pages/Expertise";
 import { Contact } from "./pages/Contact";
 import { FutureNow } from "./pages/FutureNow";
+import { News } from "./pages/News";
+import { NewsDetail } from "./pages/NewsDetail";
 import NotFound from "./pages/NotFound";
 import { useEffect } from "react";
 
@@ -44,6 +46,8 @@ const App = () => (
               <Route path="/about" element={<About />} />
               <Route path="/expertise" element={<Expertise />} />
               <Route path="/future-now" element={<FutureNow />} />
+              <Route path="/news" element={<News />} />
+              <Route path="/news/:id" element={<NewsDetail />} />
               <Route path="/contact" element={<Contact />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
