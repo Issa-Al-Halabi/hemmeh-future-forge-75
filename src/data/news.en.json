@@ -3,33 +3,8 @@
     "title": "Latest News",
     "subtitle": "Stay updated with our latest announcements and developments"
   },
+  "readMore": "Read More",
   "news": [
-    {
-      "id": "cambridge-joint-venture",
-      "title": "Launch of Joint Venture Between Himmah Consulting and Cambridge Consulting Services",
-      "subtitle": "A strategic partnership to enhance joint capabilities in studies, research, and international consulting",
-      "date": "2025/08/01",
-      "image": "/partners/cambridge.png",
-      "content": "Himmah Consulting is proud to announce the formation of a joint venture with Cambridge Consulting Services, a globally recognized consulting firm with an extensive international presence. This strategic partnership will enhance both firms' capabilities in the fields of studies, research, and international consulting.\n\nThe joint venture will focus on delivering comprehensive technical studies, strategic research, and innovative consulting solutions to support major projects across a variety of sectors worldwide. By combining expertise and resources, this collaboration aims to provide advanced, customized solutions that address the diverse needs of global markets while fostering sustainable development and the successful execution of large-scale projects.\n\nWith a global reach spanning multiple continents, Cambridge Consulting Services brings unmatched experience in working across borders, ensuring that the joint venture delivers high-impact, cutting-edge strategies for clients in various industries around the world.\n\nAt Himmah Consulting, we are excited about the opportunities this joint venture with Cambridge Consulting Services will create and look forward to delivering impactful results that contribute to business growth and innovation on a global scale.",
-      "gallery": [
-        "/partners/cambridge.png",
-        "/partners/cambridge.png",
-        "/partners/cambridge.png"
-      ]
-    },
-    {
-      "id": "future-vision-2024",
-      "title": "Launch of Joint Venture Between Himmah Consulting and Cambridge Consulting Services",
-      "subtitle": "A strategic partnership to enhance joint capabilities in studies, research, and international consulting",
-      "date": "2025/08/01",
-      "image": "/partners/cambridge.png",
-      "content": "Himmah Consulting is proud to announce the formation of a joint venture with Cambridge Consulting Services, a globally recognized consulting firm with an extensive international presence. This strategic partnership will enhance both firms' capabilities in the fields of studies, research, and international consulting.\n\nThe joint venture will focus on delivering comprehensive technical studies, strategic research, and innovative consulting solutions to support major projects across a variety of sectors worldwide. By combining expertise and resources, this collaboration aims to provide advanced, customized solutions that address the diverse needs of global markets while fostering sustainable development and the successful execution of large-scale projects.\n\nWith a global reach spanning multiple continents, Cambridge Consulting Services brings unmatched experience in working across borders, ensuring that the joint venture delivers high-impact, cutting-edge strategies for clients in various industries around the world.\n\nAt Himmah Consulting, we are excited about the opportunities this joint venture with Cambridge Consulting Services will create and look forward to delivering impactful results that contribute to business growth and innovation on a global scale.",
-      "gallery": [
-        "/partners/cambridge.png",
-        "/partners/cambridge.png",
-        "/partners/cambridge.png"
-      ]
-    },
     {
       "id": "cambridge-joint-venture",
       "title": "Launch of Joint Venture Between Himmah Consulting and Cambridge Consulting Services",

@@ -155,7 +155,7 @@ export const Expertise = () => {
                     <div className="w-16 h-16 mb-4 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
                       <IconComponent className="w-8 h-8 text-primary group-hover:scale-110 transition-transform duration-300" />
                     </div>
-                    <CardTitle className="text-xl font-bold text-primary group-hover:text-primary/80 transition-colors leading-tight">
+                    <CardTitle className="text-center text-xl font-bold text-primary group-hover:text-primary/80 transition-colors leading-tight">
                       {area.title}
                     </CardTitle>
                   </CardHeader>

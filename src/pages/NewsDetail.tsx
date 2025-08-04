@@ -1,59 +1,84 @@
 import { useParams, Link } from 'react-router-dom';
 import { useState } from 'react';
-import { useContent } from '@/hooks/useContent';
 import { useLanguage } from '@/contexts/LanguageContext';
 import { LoadingLogo } from '@/components/LoadingLogo';
 import { Button } from '@/components/ui/button';
 import { ArrowLeft, ArrowRight, Calendar } from 'lucide-react';
 import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
+import { useNewsDetail } from '@/hooks/useNewsDetail';
 
 export const NewsDetail = () => {
-  const { id } = useParams();
-  const { content, loading } = useContent('news');
+  const { slug } = useParams<{ slug: string }>();
+  const { article, loading, error, refetch } = useNewsDetail(slug || '');
   const { fontClass, isRTL } = useLanguage();
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [lightboxIndex, setLightboxIndex] = useState(0);
 
-  if (loading) {
-    return <LoadingLogo />;
-  }
-
-  if (!content) {
-    return <div className="min-h-screen flex items-center justify-center">
-      <p className="text-muted-foreground">Failed to load news content</p>
-    </div>;
-  }
-
-  const article = content.news.find((item: any) => item.id === id);
-
-  if (!article) {
-    return (
-      <div className="min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold mb-4">Article Not Found</h1>
-          <Link to="/news">
-            <Button>Back to News</Button>
-          </Link>
-        </div>
-      </div>
-    );
-  }
-
   const BackIcon = isRTL ? ArrowRight : ArrowLeft;
+
+  const formatDate = (dateString: string) => {
+    const date = new Date(dateString);
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, '0');
+    const day = String(date.getDate()).padStart(2, '0');
+    return `${year}/${month}/${day}`;
+  };
 
   const openLightbox = (index: number) => {
     setLightboxIndex(index);
     setLightboxOpen(true);
   };
 
-  const lightboxSlides = article?.gallery?.map((image: string) => ({
+  if (loading) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <LoadingLogo />
+      </div>
+    );
+  }
+
+  if (error) {
+    return (
+      <div className="min-h-screen flex flex-col items-center justify-center gap-4">
+        <p className="text-muted-foreground text-lg">
+          {error.message}
+        </p>
+        <div className="flex gap-4">
+          <Button onClick={refetch}>
+            {isRTL ? 'إعادة المحاولة' : 'Try Again'}
+          </Button>
+          <Link to="/news">
+            <Button variant="outline">
+              {isRTL ? 'العودة للأخبار' : 'Back to News'}
+            </Button>
+          </Link>
+        </div>
+      </div>
+    );
+  }
+
+  if (!article) {
+    return (
+      <div className="min-h-screen flex flex-col items-center justify-center gap-4">
+        <h1 className="text-2xl font-bold mb-4">
+          {isRTL ? 'لم يتم العثور على المقال' : 'Article Not Found'}
+        </h1>
+        <Link to="/news">
+          <Button>
+            {isRTL ? 'العودة للأخبار' : 'Back to News'}
+          </Button>
+        </Link>
+      </div>
+    );
+  }
+
+  const lightboxSlides = article.images.map((image) => ({
     src: image
-  })) || [];
+  }));
 
   return (
     <div className={`min-h-screen bg-background ${fontClass}`}>
-    
       {/* Article Content */}
       <article className="max-w-4xl mx-auto px-4 py-12">
         {/* Hero Image */}
@@ -69,7 +94,7 @@ export const NewsDetail = () => {
         <div className="mb-8">
           <div className="flex items-center gap-2 text-muted-foreground mb-4">
             <Calendar size={18} />
-            <span>{article.date}</span>
+            <span>{formatDate(article.date)}</span>
           </div>
           
           <h1 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">
@@ -82,22 +107,19 @@ export const NewsDetail = () => {
         </div>
 
         {/* Article Content */}
-        <div className="prose prose-lg max-w-none mb-12 text-justify">
-          {article.content.split('\n\n').map((paragraph: string, index: number) => (
-            <p key={index} className="mb-6 leading-relaxed text-foreground">
-              {paragraph}
-            </p>
-          ))}
-        </div>
+        <div 
+          className="prose prose-lg max-w-none mb-12 text-justify"
+          dangerouslySetInnerHTML={{ __html: article.content }}
+        />
 
         {/* Gallery */}
-        {article.gallery && article.gallery.length > 0 && (
+        {article.images.length > 0 && (
           <div className="mb-12">
             <h3 className="text-2xl font-semibold mb-6">
               {isRTL ? 'معرض الصور' : 'Photo Gallery'}
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {article.gallery.map((image: string, index: number) => (
+              {article.images.map((image, index) => (
                 <div 
                   key={index} 
                   className="aspect-video rounded-lg overflow-hidden group cursor-pointer"
@@ -132,6 +154,7 @@ export const NewsDetail = () => {
           close={() => setLightboxOpen(false)}
           index={lightboxIndex}
           slides={lightboxSlides}
+          controller={{ closeOnBackdropClick: true }}
         />
       )}
     </div>

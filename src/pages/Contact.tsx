@@ -8,14 +8,16 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Mail, Phone, MapPin, Loader2 } from 'lucide-react';
 import { toast } from '@/hooks/use-toast';
 import { LoadingLogo } from '@/components/LoadingLogo';
+import { contactApi } from '@/services/api';
+import type { ContactFormData } from '@/types/contact';
 
 export const Contact = () => {
-  const { fontClass, isRTL } = useLanguage();
+  const { fontClass, isRTL, language } = useLanguage();
   const { content, loading } = useContent('contact');
   const observerRef = useRef<IntersectionObserver | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<ContactFormData>({
     name: '',
     email: '',
     subject: '',
@@ -52,27 +54,18 @@ export const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch('/backend/contact.php', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const data = await response.json();
-
-      if (!response.ok) {
-        throw new Error(data.error || 'Something went wrong');
+      const response = await contactApi.submit(formData, language);
+      
+      if (response.status === 'Success') {
+        toast({
+          title: content.form.successTitle,
+          description: response.message || content.form.successMessage,
+          variant: "default",
+        });
+        setFormData({ name: '', email: '', subject: '', message: '' });
+      } else {
+        throw new Error(response.message || 'Something went wrong');
       }
-
-      toast({
-        title: content.form.successTitle,
-        description: content.form.successMessage,
-        variant: "default",
-      });
-
-      setFormData({ name: '', email: '', subject: '', message: '' });
     } catch (error) {
       toast({
         title: content.form.errorTitle || "Error",

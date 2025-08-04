@@ -166,11 +166,11 @@ export const About = () => {
                 <CardHeader className="pb-4">
                   <div className="flex items-start gap-3">
                     <CheckCircle className="text-primary flex-shrink-0 mt-1" size={24} />
-                    <div>
-                      <CardTitle className="text-xl font-bold text-primary mb-3">
+                    <div className="flex flex-col grow 1">
+                      <CardTitle className="text-center text-xl font-bold text-primary mb-3">
                         {point.title}
                       </CardTitle>
-                      <p className="text-muted-foreground leading-relaxed">
+                      <p className="text-center text-muted-foreground leading-relaxed">
                         {point.subtitle}
                       </p>
                     </div>
@@ -207,9 +207,9 @@ export const About = () => {
                 {clients.map((client, index) => (
                   <CarouselItem
                     key={index}
-                    className="pl-2 md:pl-4 basis-1/2 md:basis-1/3 lg:basis-1/4 xl:basis-1/6"
+                    className="pl-2 md:pl-4 basis-1/1 md:basis-1/3 lg:basis-1/4 xl:basis-1/6"
                   >
-                    <div className="h-24 md:h-32 p-4 flex items-center justify-center bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                    <div className="h-16 md:h-32 flex items-center justify-center bg-white rounded-lg ">
                       <img
                         src={client.src}
                         alt={client.alt}
